@@ -404,3 +404,15 @@ blockquote { margin: 0; }
 .proof-chart .fill.grey { background: rgba(255,255,255,.35); }
 .proof-chart small { display: block; margin-top: 22px; color: rgba(255,255,255,.55); font-size: .8rem; }
 @media (max-width: 860px) { .proof { grid-template-columns: 1fr; } }
+
+/* Typographic insight panels (no stock imagery) */
+.insight-art { aspect-ratio: 3 / 2; display: flex; align-items: flex-end; gap: 14px; padding: clamp(22px, 2.6vw, 30px); font-family: var(--serif); font-size: clamp(1.5rem, 2.3vw, 1.95rem); line-height: 1.1; letter-spacing: -.015em; position: relative; overflow: hidden; }
+.insight-art em { font-style: italic; }
+.insight-art .big { font-size: 5.5em; line-height: .78; letter-spacing: -.04em; }
+.insight-art::after { content: ""; position: absolute; right: -60px; top: -60px; width: 180px; height: 180px; border-radius: 50%; border: 28px solid currentColor; opacity: .08; transition: transform .6s ease; }
+.insight:hover .insight-art::after { transform: scale(1.15); }
+.art-navy { background: var(--navy); color: #fff; }
+.art-navy em { color: var(--gold); }
+.art-gold { background: var(--gold); color: var(--navy-900); }
+.art-cream { background: var(--cream); color: var(--navy-900); }
+.art-cream .big { color: var(--gold-600); }
